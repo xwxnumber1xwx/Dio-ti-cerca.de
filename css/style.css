@@ -57,7 +57,45 @@ body {
     width: 100%;
 }
 
-@media only screen and (max-width: 899px) and (orientation: portrait){
+.tooltip {
+    position: relative;
+}
+
+.tooltiptext {
+    font-size: 30px;
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    display: inline;
+    top: 51px;
+    left: 0;
+    right: 0;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+@media only screen and (max-width: 479px) {
+    .col {
+        width: 40%;
+    }
+    body {
+        font-size: 2em;
+    }
+    .tooltiptext {
+        top: 60px;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 899px) and (orientation: portrait){
     .col {
         width: 30%;
         padding: 10px;
@@ -68,26 +106,8 @@ body {
     body {
         font-size: 2em;
     }
-}
-
-
-
-@media only screen and (max-width: 479px) and (orientation: portrait)  {
-    .col {
-        width: 40%;
-    }
-    body {
-        font-size: 2em;
-    }
-}
-
-@media only screen and (max-height: 699px) and (max-width: 899px) and (orientation: portrait) {
-    .col {
-        width: 35%;
-        padding: 0;
-    }
-    body {
-        font-size: 2em;
+    .tooltiptext {
+        top: 61px;
     }
 }
 
@@ -105,4 +125,23 @@ body {
     body {
         font-size: 2em;
     }
+
+    .tooltiptext {
+        top: 30px;
+        font-size: 22px;
+    }
 }
+
+@media only screen and (min-height: 540px) and (max-height: 699px) and (max-width: 899px) and (orientation: portrait) {
+    .col {
+        width: 35%;
+        padding: 0;
+    }
+    body {
+        font-size: 2em;
+    }
+    .tooltiptext {
+        top: 45px;
+    }
+}
+
